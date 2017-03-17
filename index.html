@@ -30,10 +30,10 @@
 			"public-profile-url"
 		)
 		.result(function(value) {
-			console.info(JSON.stringify(value));
+			console.info(value);
 		})
-		.error(function(error) {
-			console.error(JSON.stringify(error));
+		.error(function(value) {
+			console.error(value);
 		});
 		/*
         var url = "/people/~:(id,firstName,lastName,emailAddress)?format=json";
