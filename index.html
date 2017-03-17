@@ -11,7 +11,9 @@
 
 	function MM_userAuthorized(){
 		console.info(arguments);
-		MM_retrieveProfile();
+		if(IN.User.isAuthorized()){
+			MM_retrieveProfile();
+		}
 	}
 
 	function MM_retrieveProfile(){
