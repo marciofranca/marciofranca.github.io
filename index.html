@@ -6,11 +6,12 @@
 		if(!IN.User.isAuthorized()){
 			IN.User.authorize(MM_userAuthorized);
 		}
-		MM_retrieveProfile();
+		MM_userAuthorized();
     }
 
 	function MM_userAuthorized(){
 		console.info(arguments);
+		MM_retrieveProfile();
 	}
 
 	function MM_retrieveProfile(){
