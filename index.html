@@ -7,7 +7,7 @@
 	}
 
 	function MM_userAuthorized(){
-		console.info(arguments);
+		console.info(JSON.stringify(arguments, null, "\t"));
 		if(IN.User.isAuthorized()){
 			MM_retrieveProfile();
 		}
