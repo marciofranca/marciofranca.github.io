@@ -4,7 +4,8 @@
 <script>
     function invite() {
 		console.log(IN.User.isAuthorized());
-		IN.API.Raw('/company-search?keywords=LinkedIn')
+		IN.API.Profile("me")
+		.fields("first-name", "last-name", "email-address")
 		.result(function(value) {
 			alert(JSON.stringify(value));
 		})
