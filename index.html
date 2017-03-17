@@ -1,1 +1,45 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    function invite() {
+        var url = '/people/~/mailbox',
+            body = {
+                recipients: {
+                  values: [{
+                    person: {
+                      _path: '/people/email=a_user@domain.com',
+                      'first-name':'Andrew',
+                      'last-name':'User'
+                     }
+                  }]
+                },
+                subject: 'Invitation to connect.',
+                body: 'Say yes!',
+                'item-content':{
+                     'invitation-request':{
+                         'connect-type':'friend'
+                     }
+                }
+            };
+        IN.API.Raw()
+            .url(url)
+            .method("POST")
+            .body(JSON.stringify(body))
+            .result(function (result) {
+                console.log(result);
+            })
+            .error(function (error) {
+                console.log(error);
+            });
+    }
+</script>
+<script type="text/javascript" src="//platform.linkedin.com/in.js">
+    api_key: 781bgftfukqgll
+    onLoad: invite
+    authorize: true
+</script>
+</head>
+<body>
+</body>
+</html>
