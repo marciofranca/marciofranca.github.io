@@ -3,10 +3,9 @@
 <head>
 <script>
     function invite() {
-        var url = '/people/~';
-        IN.API.Raw()
-            .url(url)
-            .method("GET")
+        var url = "/people/~:(id,firstName,lastName,emailAddress)?format=json";
+        IN.API.Raw(url)
+            //.method("GET")
             //.body(JSON.stringify(body))
             .result(function (result) {
                 console.log(result);
