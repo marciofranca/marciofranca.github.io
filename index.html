@@ -2,9 +2,9 @@
 <html>
 <head>
 <script>
-    function MM_onLoad() {
+	function MM_onLoad() {
 		IN.Event.on(IN, "auth", MM_userAuthorized);
-    }
+	}
 
 	function MM_userAuthorized(){
 		console.info(arguments);
@@ -44,11 +44,11 @@
 	}
 
 	function MM_profileRetrieved(){
-		console.info(arguments);
+		console.info(JSON.stringify(arguments, null, "\n");
 	}
 
 	function MM_errorThrown(){
-		console.error(arguments);
+		console.error(JSON.stringify(arguments, null, "\n");
 	}
 
 
