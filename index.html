@@ -3,10 +3,7 @@
 <head>
 <script>
     function MM_onLoad() {
-		if(!IN.User.isAuthorized()){
-			IN.User.authorize(MM_userAuthorized);
-		}
-		MM_userAuthorized();
+		IN.Event.on(IN, "auth", MM_userAuthorized);
     }
 
 	function MM_userAuthorized(){
