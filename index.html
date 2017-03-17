@@ -2,8 +2,18 @@
 <html>
 <head>
 <script>
-    function invite() {
-		console.log(IN.User.isAuthorized());
+    function MM_onLoad() {
+		if(IN.User.isAuthorized()){
+			IN.User.authorize(MM_userAuthorized);
+		}
+		MM_retrieveProfile();
+    }
+
+	function MM_userAuthorized(){
+		console.info(arguments);
+	}
+
+	function MM_retrieveProfile(){
 		IN.API.Profile("me")
 		.fields(
 			"id",
@@ -29,29 +39,24 @@
 			"api-standard-profile-request",
 			"public-profile-url"
 		)
-		.result(function(value) {
-			console.info(value);
-		})
-		.error(function(value) {
-			console.error(value);
-		});
-		/*
-        var url = "/people/~:(id,firstName,lastName,emailAddress)?format=json";
-        IN.API.Raw(url)
-            //.method("GET")
-            //.body(JSON.stringify(body))
-            .result(function (result) {
-                console.log(result);
-            })
-            .error(function (error) {
-                console.log(error);
-            });
-			*/
-    }
+		.result(MM_profileRetrieved)
+		.error(MM_errorThrown);
+	}
+
+	function MM_profileRetrieved(){
+		console.info(arguments);
+	}
+
+	function MM_errorThrown(){
+		console.error(arguments);
+	}
+
+
+
 </script>
 <script type="text/javascript" src="//platform.linkedin.com/in.js">
     api_key: 781bgftfukqgll
-    onLoad: invite
+    onLoad: MM_onLoad
     authorize: true
 	lang: pt_BR
 </script>
