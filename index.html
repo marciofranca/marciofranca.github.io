@@ -3,6 +3,7 @@
 <head>
 <script>
     function invite() {
+		console.log(IN.User.isAuthorized());
         var url = "/people/~:(id,firstName,lastName,emailAddress)?format=json";
         IN.API.Raw(url)
             //.method("GET")
@@ -19,6 +20,7 @@
     api_key: 781bgftfukqgll
     onLoad: invite
     authorize: true
+	lang: pt_BR
 </script>
 </head>
 <body>
