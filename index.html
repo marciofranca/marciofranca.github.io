@@ -3,7 +3,7 @@
 <head>
 <script>
     function MM_onLoad() {
-		if(IN.User.isAuthorized()){
+		if(!IN.User.isAuthorized()){
 			IN.User.authorize(MM_userAuthorized);
 		}
 		MM_retrieveProfile();
