@@ -76,7 +76,9 @@ var Bingo_BoardApp = (function(){
 	}
 
 	function startNewGame(){
-		board.startNewGame();
+		if(confirm("Jogo atual será finalizado. Tem certeza?")){
+			board.startNewGame();
+		}
 	}
 
 	function newGameStarted(event){

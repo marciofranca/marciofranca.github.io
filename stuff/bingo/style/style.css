@@ -8,6 +8,11 @@ body{
 	padding: 0px 20px;
 }
 
+h1{
+	padding: 0;
+	margin: 0;
+}
+
 #bingo-board{
 	font-size: xx-large;
 }
@@ -75,11 +80,9 @@ body{
 }
 
 #bingo-board-actions{
-	margin-top: 15px;
-	margin-bottom: 15px;
-	margin-left: 40px;
-	width: 750px;
-	text-align: center;
+	margin-top: 0;
+	margin-bottom: 5px;
+	padding:0;
 }
 
 #bingo-board-actions input{
@@ -89,8 +92,8 @@ body{
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	height: 25px;
-	margin-right: 10px;
-	font-weight: bolder;
+	margin: 0;
+	margin-right: 2px;
+	font-size: 5px;
 }
 
