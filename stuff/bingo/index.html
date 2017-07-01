@@ -5,14 +5,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 		<title>BINGO Online</title>
+
+		<link href="style/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	</head>
 
 	<body>
-		<h1>BINGO Online</h1>
+		<div id="bingo-board-actions">
+			<input type="button" id="bingo-board-startNewGame" value="Start New Game" />
+			<input type="button" id="bingo-board-playNext" value="Play Next" />
+		</div>
 		<div id="bingo-board">
 		</div>
 
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script src="script/init.js"></script>
+		<script src="script/text.js"></script>
 	</body>
 </html>

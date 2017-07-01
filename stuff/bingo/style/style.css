@@ -1,0 +1,96 @@
+html{
+	font-family: sans-serif;
+	color: #ecf0f1;
+}
+
+body{
+	background-color: #34495e;
+	padding: 0px 20px;
+}
+
+#bingo-board{
+	font-size: xx-large;
+}
+
+#bingo-board{
+}
+
+#bingo-board table{
+	border-collapse: collapse;
+}
+
+#bingo-board table,
+#bingo-board th,
+#bingo-board td {
+	background-color: #2c3e50;
+	color: #ecf0f1;
+	border: none;
+}
+
+#bingo-board table td{
+	text-align: center;
+	vertical-align: middle;
+	padding: 5px;
+	width: 40px;
+	height: 40px;
+}
+
+#bingo-board table td.header{
+	padding: 0;
+	font-weight: bolder;
+	font-size: larger;
+	color: #e74c3c;
+	background-color: #ecf0f1;
+}
+
+#bingo-board table td.drawn{
+	background-color: #e74c3c;
+}
+
+#bingo-board table td.last{
+	background-color: #27ae60;
+	font-weight: bolder;
+}
+
+#bingo-board div{
+	margin-top: 25px;
+	margin-left: 40px;
+	width: 750px;
+}
+
+#bingo-board div span{
+	display: inline-block;
+	width: 50px;
+	text-align: center;
+}
+
+#bingo-board div span{
+	font-weight: bolder;
+}
+
+#bingo-board div span.last{
+	background-color: #27ae60;
+	font-weight: bolder;
+	font-size: larger;
+}
+
+#bingo-board-actions{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 40px;
+	width: 750px;
+	text-align: center;
+}
+
+#bingo-board-actions input{
+	background-color: #2980b9;
+	border: none;
+	color: #ecf0f1;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	height: 25px;
+	margin-right: 10px;
+	font-weight: bolder;
+}
+
